@@ -16,7 +16,7 @@ jobs:
           pip install -r requirements.txt      
       - name: Run on BG
         run: |
-          python p0/manage.py runserver 0.0.0.0:8888 &
+          python p1/manage.py runserver 0.0.0.0:8888 &
           echo $! > app.pid
       - uses: matt-ball/newman-action@master
         with:
