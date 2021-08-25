@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "8a6f0c81-dd1e-460f-9d1c-713450a8e3b2",
+		"name": "Mentoria Compartilhada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches Hello World\", function () {\r",
+							"    pm.expect(pm.response.text()).to.equal(\"Hello World\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{SERVER}}/api/hello",
+					"protocol": "http",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
